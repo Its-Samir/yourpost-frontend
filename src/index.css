@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Merriweather&family=Montserrat&family=Noto+Sans&display=swap');
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #a6a6a6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +23,492 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#logo {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#profileView {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+p {
+  color: #607d8b;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #000000;
+  color: #ffffff;
+  z-index: 1;
+  position: sticky;
+  top: 0;
+}
+
+.navbar .list li {
+  display: inline-block;
+  margin: 1rem;
+}
+
+.notifyIcon {
+  font-size: 20px;
+  margin-bottom: -6px;
+}
+
+.btn {
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+  padding: 10px 2rem;
+  border-radius: 20px;
+  color: #000000;
+  cursor: pointer;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 0 0 10px 0;
+  border-bottom: 1px solid;
+}
+
+.form-control input {
+  width: 100%;
+  margin: 10px auto;
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid;
+}
+
+.invalid-form-error {
+  padding: 10px;
+  color: rgb(255, 25, 25);
+}
+
+.form-control input:focus {
+  outline: none;
+}
+
+.form-control .sendPostBtn,
+.commentBtn {
+  padding: 10px;
+  margin: 10px;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.loginDiv,
+.registerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 80vh;
+  text-align: center;
+}
+
+.loginWrapper {
+  border: 1px solid #05b75b;
+  width: 25rem;
+  padding: 1rem;
+}
+
+.loginWrapper h2 {
+  color: #295dfb;
+}
+
+.registerWrapper h2 {
+  color: #05b75b;
+}
+
+.registerWrapper {
+  border: 1px solid #295dfb;
+  width: 25rem;
+  padding: 1rem;
+}
+
+.login-form input,
+.register-form input {
+  width: 100%;
+}
+
+.loginBtn {
+  background-color: #295dfb;
+  color: #ffffff;
+}
+
+.registerBtn {
+  background-color: #05b75b;
+  color: #ffffff;
+}
+
+.container {
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.leftBar {
+  flex: 2;
+  box-shadow: 0px 0px 5px #000000;
+}
+
+.leftBar .leftBarWrapper {
+  position: sticky;
+  height: 100vh;
+  top: 90px;
+  overflow: scroll;
+}
+
+.friendDiv {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 1rem;
+}
+
+.friendDiv img {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 50px;
+  width: 50px;
+  margin: 0 10px;
+}
+
+.feedBar {
+  flex: 4;
+}
+
+.feedBar .feedBarWrapper {
+  padding: 10px;
+}
+
+.rightBar {
+  flex: 2;
+  box-shadow: 2px 0px 5px #000000;
+}
+
+.rightBar .rightBarWrapper {
+  position: sticky;
+  top: 90px;
+  text-align: center;
+  width: 100%;
+}
+
+.rightBarWrapper .adsImg {
+  margin: 1rem;
+  border-radius: 20px;
+  width: 90%;
+}
+
+.rightBarWrapper .giftImg {
+  width: 10%;
+  margin-top: 10px;
+}
+
+.postDiv {
+  border-bottom: 1px solid #05b75b;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.postDiv p {
+  margin: 10px 0 10px 10px;
+}
+
+.postDiv h2 {
+  color: #07b77c;
+  margin: 10px 0;
+}
+
+.postUpperDiv {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.post-time {
+  padding: 1rem 0;
+}
+
+.profilePicSpan {
+  border-radius: 50%;
+  border: 2px solid #12f4e3;
+  /* padding: 5px 15px;
+  margin: 0 10px 0 0; */
+  background-color: #607d8b;
+}
+
+#postProfileImg {
+  width: 10%;
+  margin: -10px 0;
+  border: 1px solid rgb(146, 191, 231);
+  border-radius: 15%;
+  box-shadow: 0px 0px 5px #03ce8a;
+}
+
+.timeLineHeading, .noPostParagraph {
+  margin: 0 2rem;
+  color: #607d8b;
+}
+
+.actionTab {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.actionTab .hearthImg {
+  width: 15%;
+  cursor: pointer;
+}
+
+#likeIcon {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.likeDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.commentsOverlay {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000000a4;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.commentDiv {
+  display: none;
+  background-color: #ffffff;
+  width: 60%;
+  border-radius: 5px;
+  max-height: 20rem;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 1rem;
+  overflow-y: scroll;
+  z-index: 1;
+}
+
+.commentDiv::-webkit-scrollbar {
+  width: 10px;
+  height: 90%;
+}
+
+.commentDiv::-webkit-scrollbar-track {
+  background-color: rgb(252, 250, 250);
+  padding: 1rem;
+  border-radius: 20px;
+}
+
+.commentDiv::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: rgb(152, 151, 151);
+}
+
+.usernameFromPosts {
+  color: #295dfb;
+  text-decoration: none;
+}
+
+.userProfileLinkFromComment {
+  color: #295dfb;
+}
+
+.comment {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem;
+  margin: 1rem;
+  border: 1px solid #4ff334;
+  border-radius: 10px;
+}
+
+.comment p {
+  padding: 1rem 0;
+}
+
+.comment p:nth-child(2) {
+  font-size: .6rem;
+}
+
+
+.commentPara {
+  cursor: pointer;
+  padding: 0 10px 0 0;
+}
+
+.showCommentDiv {
+  display: block;
+}
+
+.profileWrapper {
+  display: flex;
+  margin: 5rem 0;
+}
+
+.profileBanner {
+  width: 100%;
+  height: 10rem;
+  background-image: linear-gradient(45deg, #07b77c, #12f4e3, #4e3377);
+  position: relative;
+}
+
+.profileImg {
+  width: 10rem;
+  height: 10rem;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 2px solid #295dfb;
+  position: absolute;
+  top: 0;
+  bottom: -70px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.profileImg img {
+  width: 90%;
+  margin: 10px 0;
+  border-radius: 50%;
+}
+
+.username {
+  font-size: 2rem;
+  color: #607d8b;
+  position: absolute;
+  top: 0;
+  bottom: -320px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  height: 5rem;
+  text-align: center;
+}
+
+.friendListHeading {
+  margin: 10px 1rem;
+}
+
+.deleteOverlay {
+  width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: #000000a4;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.deleteModal {
+  width: 25rem;
+  height: max-content;
+  margin: auto;
+  padding: 1rem 1rem 0;
+  background-color: #07b77c;
+  color: #ffffff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0 ;
+  bottom: 0;
+  border-radius: 5px;
+}
+
+.deleteModal .actions {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.deleteModal .actions .deleteBtn {
+  margin-left: 10px;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .rightBar {
+    display: none;
+  }
+
+  .timeLineHeading {
+    margin-top: 3rem;
+  }
+  
+}
+
+@media (max-width: 570px) {
+  .leftBar {
+    display: none;
+  }
+
+  .deleteModal {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 426px) {
+  .navbar {
+    height: 50px;
+    font-size: .8rem;
+  }
+
+  .navbar .list li {
+    margin: .5rem;
+  }
+
+  .btn {
+    padding: 7px 1rem;
+  }
+
+  .commentDiv {
+    width: 90%;
+    font-size: .8rem;
+  }
+
+  .comment {
+    margin: 20px 0;
+  }
+
+  .comment-form {
+    padding: 0;
+  }
+
+  .postDiv {
+    padding: 0;
+    font-size: 1rem;
+  }
+
+  .postDiv p {
+    font-size: .8rem;
+    padding: 0;
+  }
+  
+  .postDiv .post-time {
+    font-size: .7rem;
+  }
+
 }
